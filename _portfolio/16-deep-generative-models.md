@@ -9,6 +9,14 @@ excerpt: "Seasons of Code, Web and Coding Club, IIT Bombay, June–August 2024<b
 **Organisation:** Seasons of Code, Web and Coding Club, IIT Bombay (June – August 2024)<br/>
 **Code:** [DGMs---SOC](https://github.com/theFulminatedHuman/DGMs---SOC) · [DCGAN on CelebA](https://github.com/theFulminatedHuman/DCGAN-implementation-on-CelebA-dataset)
 
+### Overview
+Seasons of Code is a mentored summer programme at IIT Bombay. This project worked through the three main
+families of deep generative models: generative adversarial networks, variational autoencoders, and
+flow-matching and diffusion models. Each was implemented from scratch and trained on the CelebA face dataset
+for image generation.
+
+### What I did
+
 - Implemented a **Deep Convolutional GAN** from scratch on CelebA and tuned depth, batch size, and learning
   rate to produce sharper, less noisy samples.
 - Improved **flow-matching** training with loss-function design, learning-rate schedules, and automated

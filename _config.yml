@@ -52,7 +52,10 @@ author:
   codepen          : # Username
   dribbble         : # Username
   github           : "theFulminatedHuman"
-  kaggle           : # Username  
+  huggingface      : "knock-knock"            # Hugging Face username
+  codeforces       : "kolmogorovarnoldnetworks" # Codeforces handle
+  leetcode         : "spacestuck_vedant"      # LeetCode username
+  kaggle           : "spacestuck"
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
   # Social media
@@ -66,7 +69,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : # Username
+  linkedin         : "vedant-bhardwaj-997b14284"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username

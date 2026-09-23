@@ -9,6 +9,14 @@ excerpt: "Course project (AE700), IIT Bombay, January–March 2026 · Advisor: P
 **Course:** AE700, IIT Bombay (January – March 2026)<br/>
 **Advisor:** Prof. S. Kumar
 
+### Overview
+The project built a complete simulation of a fixed-wing aircraft, starting from the nonlinear
+six-degree-of-freedom equations of motion, and then designed an autopilot on top of it. The autopilot uses
+successive loop closure, a standard technique in which inner loops (attitude) are designed and closed first and
+outer loops (altitude, heading, airspeed) are then built around them.
+
+### What I did
+
 - Built a nonlinear **12-state, 6-DOF** flight simulation in **Simulink** and ran staged test cases across the
   full flight model.
 - Verified trim convergence to machine precision (**92.47 m/s, 22.4°**), with every state held constant over a

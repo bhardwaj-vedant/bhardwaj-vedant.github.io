@@ -12,8 +12,13 @@ excerpt: "Research internship, MBZUAI, Abu Dhabi, May–July 2025 · Advisors: P
 **Related code:** [CRNet (fork)](https://github.com/theFulminatedHuman/Contrastive-Balancing-Representation-Network-CRNet)
 
 ### Overview
-This project estimated dose-response curves with deep learning when treatments are continuous and
-autoregressive, a setting in which confounding is especially difficult to remove.
+Most causal-inference methods assume a binary treatment: a unit either receives a drug or it does not. Many
+real decisions are continuous instead, such as a dose, a price, or a budget, and they often depend on earlier
+treatments. The goal is to estimate the whole **dose-response curve**, that is, the expected outcome at every
+treatment level. Doing so requires correcting for confounding, because units that receive high doses differ
+systematically from those that receive low doses. The project built on CRNet, a contrastive
+balancing-representation network, and asked how far attention mechanisms and adversarial balancing could
+improve it in the continuous and autoregressive settings.
 
 ### Contributions
 - Extended **CRNet**, a state-of-the-art model, with attention modules that weight treatment–covariate

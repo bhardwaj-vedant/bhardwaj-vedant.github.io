@@ -9,6 +9,24 @@ excerpt: "Independent project, August 2026 · C++20<br/>A Texas Hold'em equity s
 **Type:** Independent project (August 2026)<br/>
 **Code:** [github.com/theFulminatedHuman/Poker-Engine](https://github.com/theFulminatedHuman/Poker-Engine)
 
+### Overview
+Given each player's hole cards (or a weighted range of possible hands for the opponent) and any community
+cards already dealt, the engine computes each player's **equity**: the probability of winning plus half the
+probability of a tie. It offers two modes. **Exact mode** enumerates every possible remaining board. **Monte
+Carlo mode** samples boards across several threads and reports a standard error and confidence interval, and
+it can keep sampling until a requested precision is reached. The engine is available from the command line,
+as a REST API, and through a web front end.
+
+| | |
+|---|---|
+| 7-card hand evaluation | 8.9 ns from a bare mask (12.3 ns on the hot path) |
+| Exact pre-flop enumeration | all 1,712,304 boards in about 13 ms on 4 cores |
+| Monte Carlo throughput | 49.5 M trials/s on 4 cores |
+| Parallel scaling | 3.9× (exact) and 2.9× (Monte Carlo) on 4 cores |
+| Correctness | 149 tests; the solver matches an independent brute-force implementation exactly |
+
+### Engineering highlights
+
 - Designed a Texas Hold'em equity engine in **C++20**. It hashes all **49,205** seven-card rank multisets into
   a minimal perfect-hash table over 52-bit bitboards with incremental accumulation, cutting evaluation time from
   **3080 ns to 8.9 ns (346×)**.

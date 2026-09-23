@@ -9,6 +9,14 @@ excerpt: "Finance Club, IIT Bombay (FinSearch), July 2025<br/>Deep RL agents (DQ
 **Organisation:** Finance Club, IIT Bombay (FinSearch, 4 weeks, July 2025)<br/>
 **Code:** [github.com/theFulminatedHuman/RL-in-Stock-Trading-Optimization](https://github.com/theFulminatedHuman/RL-in-Stock-Trading-Optimization)
 
+### Overview
+Portfolio management is a sequential decision problem: at each step the agent reallocates capital across
+assets, and each decision affects the opportunities available later. The project surveyed the main families of
+deep RL algorithms, both value-based and actor-critic, by implementing each from scratch. It then applied the
+continuous-action methods to real Indian equity data.
+
+### What I did
+
 - Implemented **DQN, PPO, A2C, DDPG, TD3, and SAC** from scratch in Keras to compare how well each suits
   sequential decision-making under uncertainty.
 - Solved the **inverted pendulum** with actor-critic torque control. Balancing the pendulum is a useful analogy
