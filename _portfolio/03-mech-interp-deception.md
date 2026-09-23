@@ -10,8 +10,11 @@ excerpt: "Course research project (DS606), IIT Bombay, 2026 · Advisor: Prof. Ar
 **Advisor:** Prof. Arjun Bhagoji
 
 ### Overview
-This project probed and suppressed deceptive behaviour in open-source language models by analysing their
-internal activations.
+If a model can behave deceptively, we would like to know *where* in the network that behaviour is represented
+and whether it can be removed surgically. This project treats deception as a direction in activation space. It
+first tests, layer by layer, whether that direction can be decoded at all. It then extracts the direction with
+PCA and projects it out during the forward pass. Finally, it measures both how much the deceptive behaviour
+changes and how much general capability is lost as a side effect.
 
 ### Contributions
 - Located context-sensitivity to deception in **GPT-2-XL** and **Llama-3.2-3B** using layer-wise linear probes.

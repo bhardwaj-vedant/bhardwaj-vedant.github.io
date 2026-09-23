@@ -10,8 +10,12 @@ excerpt: "Independent research project, June 2025<br/>A controlled comparison of
 **Code:** [github.com/theFulminatedHuman/GFlowNets-vs-GRPO-in-LLM-Math-Tasks](https://github.com/theFulminatedHuman/GFlowNets-vs-GRPO-in-LLM-Math-Tasks)
 
 ### Overview
-This project asked how GFlowNet-based preference optimisation (GDPO) compares with GRPO, the prevailing
-state-of-the-art method, for training LLMs on mathematical reasoning.
+Generative Flow Networks (GFlowNets) learn to sample solutions in proportion to their reward, so in principle
+they explore many solution paths rather than collapsing onto one. That property seems well suited to
+mathematical reasoning, where one question often has several valid derivations. Group Relative Policy
+Optimisation (GRPO) is the on-policy method behind many recent reasoning models; it normalises rewards within
+groups of sampled answers. This project put the two approaches head-to-head on grade-school math word problems
+under matched conditions, in order to see whether the theoretical appeal of GFlowNets carries over in practice.
 
 ### Findings
 - With identical architectures on **GSM8K**, GRPO achieved **3× higher accuracy** and more stable training
@@ -20,3 +24,10 @@ state-of-the-art method, for training LLMs on mathematical reasoning.
   feedback that GRPO exploits.
 - Scaling tests suggest a solve rate above **25%** is reachable with over 10K pre-training steps and
   operation-specific reward bonuses.
+
+### Why the GFlowNet approach struggled
+- **Credit assignment.** Detailed-balance losses spread the reward signal thinly across long reasoning
+  trajectories, and exact arithmetic needs precise credit on individual steps.
+- **Early termination.** The learned flows favoured stopping early over completing a solution.
+- **Offline preference learning.** Without the on-policy feedback that GRPO receives, the GFlowNet policy
+  never found enough correct trajectories to learn from.

@@ -156,6 +156,10 @@
   img {
     max-width: 175px;
     border-radius: 50%;
+    // crop non-square photos to a circle instead of an oval
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: 50% 30%;
 
     @include breakpoint($large) {
       padding: 5px;
@@ -321,4 +325,45 @@
       text-decoration: underline;
     }
   }
+}
+
+/* Row of profile icons below the name and bio */
+.author__profiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em 0.9em;
+  margin: 0.8em 0 1em;
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin: 0;
+    line-height: 1;
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--global-text-color);
+    font-size: 1.4em;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--global-link-color);
+    }
+  }
+
+  .brand-icon {
+    width: 1em;
+    height: 1em;
+  }
+}
+
+/* The follow list only holds desktop-only details, so the mobile toggle has nothing to show.
+   Use visibility rather than display: greedy-navigation.js checks this button's :visible state
+   to decide whether the layout is mobile. */
+.author__urls-wrapper .btn {
+  visibility: hidden;
+  pointer-events: none;
 }
