@@ -9,7 +9,7 @@ $dark-gray                  : mix(#000, $gray, 40%);
 $darker-gray                : mix(#000, $gray, 60%);
 $light-gray                 : mix(#fff, $gray, 50%);
 
-$background                 : #474747;
+$background                 : #0d1117;    // near-black; the template default (#474747) reads as grey
 $background-light           : mix(#fff, $background, 80%);
 $background-lighter         : mix(#fff, $background, 90%);
 $text                       : #ffffff;
@@ -38,19 +38,18 @@ $sidebar-screen-min-width   : 1024px;
 html[data-theme="dark"] {
     --global-base-color                 : #{$primary-color};
     --global-bg-color                   : #{$background};
-    --global-footer-bg-color            : #{$background};
-    --global-border-color               : #{$light-gray};
-    --global-dark-border-color          : #{$background-light};
-    --global-code-background-color      : #fafafa;
-    --global-code-text-color            : #{$darker-gray};
-    --global-fig-caption-color          : #{$light-gray};
+    --global-footer-bg-color            : #161b22;
+    --global-border-color               : #30363d;
+    --global-dark-border-color          : #30363d;
+    --global-code-background-color      : #161b22;
+    --global-code-text-color            : #e6edf3;
+    --global-fig-caption-color          : #9da7b3;
     --global-link-color                 : #{$link};
-    --global-link-color-hover           : #{$link-dark};
+    --global-link-color-hover           : #{$link-light};
     --global-link-color-visited         : #{$link-light};
-    --global-masthead-link-color        : #{$text};
+    --global-masthead-link-color        : #e6edf3;
     --global-masthead-link-color-hover  : #{$primary-color};
-    --global-text-color                 : #{$text};
-    --global-text-color-light           : #f3f3f3;
-    --global-thead-color                : #{$background-lighter};
+    --global-text-color                 : #e6edf3;
+    --global-text-color-light           : #b1bac4;
+    --global-thead-color                : #30363d;
 }
-

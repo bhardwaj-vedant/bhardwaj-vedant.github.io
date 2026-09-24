@@ -4,6 +4,23 @@ collection: portfolio
 kind: research
 order: 1
 excerpt: "Research internship, National Taiwan University, May–July 2026 · Advisors: Prof. Yen-Huan Li, Dr. Ying-Ting Lin<br/>A random-matrix-theory analysis of rank-wise double descent in parameter-efficient fine-tuning, with a closed-form rule for choosing the LoRA rank. · [Code](https://github.com/theFulminatedHuman/LORA-DoubleDescent)"
+meta: "Research Internship · National Taiwan University · May – July 2026 · Advisors: Prof. Yen-Huan Li, Dr. Ying-Ting Lin"
+code: "https://github.com/theFulminatedHuman/LORA-DoubleDescent"
+overview: |
+  Double descent is classically indexed by width, depth or training time. LoRA rank is the natural candidate for
+  a fourth axis, and choosing it is a decision every practitioner faces. This project uses random matrix theory
+  to ask whether rank genuinely plays the role of model size. For a single linear adapter fitted to its global
+  optimum, a no-go theorem shows that it cannot. The rank-*r* manifold has at most *m·d* degrees of freedom, so
+  interpolation is reachable only when *n ≤ d*, and in exactly that regime the fit is already pinned down by the
+  row space of the design. The risk therefore saturates rather than peaking. Rank instead acts as a spectral
+  regulariser, equivalent to a ridge penalty of computable strength λ<sub>eff</sub>(r). Modelling the
+  fine-tuning update as a spike in a rectangular random matrix, the Baik–Ben Arous–Péché (BBP) phase transition
+  yields a closed-form rule: the optimal rank is the number of adapter directions whose signal strength exceeds
+  the detection threshold θ<sub>c</sub> = σ(md)<sup>1/4</sup>/√(n − d − 1).
+highlights:
+  - "**A no-go theorem:** LoRA rank provably does not index double descent for a linear adapter. A gradient-trained two-layer transformer with 25% label noise confirms that test loss rises monotonically across all 12 ranks."
+  - "**A BBP rank-selection rule:** Monte Carlo simulations confirm it to within **1.5%**, and it reduces the error in predicted risk from **40% to 3%**."
+  - "**Where the peak really is:** the peak lies on the *n/d* axis. At fixed rank the optimum collapses to zero at *n = d*. On small, noisy datasets the optimal rank is **1**, and the common default r = 64 costs **1.47 nats/token**."
 ---
 
 **Institution:** National Taiwan University, Taipei<br/>

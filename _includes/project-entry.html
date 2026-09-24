@@ -1,0 +1,19 @@
+{% include base_path %}
+{% comment %} One research/project entry on the Research and Projects pages, driven by front matter:
+   meta (line under the title), overview (markdown), highlights (list), code (repository URL). {% endcomment %}
+<article class="project-entry" itemscope itemtype="http://schema.org/CreativeWork">
+  <h2 class="project-entry__title" itemprop="headline">
+    <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title }}</a>
+  </h2>
+  {% if post.meta %}<p class="project-entry__meta">{{ post.meta }}</p>{% endif %}
+  {% if post.overview %}<div class="project-entry__overview" itemprop="description">{{ post.overview | markdownify }}</div>{% endif %}
+  {% if post.highlights %}
+  <ul class="project-entry__highlights">
+    {% for item in post.highlights %}<li>{{ item | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  <p class="project-entry__links">
+    <a href="{{ base_path }}{{ post.url }}">Full write-up</a>{% if post.code %}<span class="project-entry__sep">·</span><a href="{{ post.code }}">Code</a>{% endif %}
+  </p>
+</article>

@@ -1,0 +1,76 @@
+/* ==========================================================================
+   Research and Projects listing entries (_includes/project-entry.html)
+   ========================================================================== */
+
+.project-list__intro {
+  margin: 0 0 1.25em;
+  color: var(--global-text-color-light);
+  font-size: 0.95em;
+}
+
+.project-entry {
+  padding: 1.5em 0;
+  border-bottom: 1px solid var(--global-border-color);
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
+
+.project-entry__title {
+  margin: 0 0 0.35em;
+  padding: 0;
+  border: none;
+  font-size: $type-size-4;
+  line-height: 1.3;
+
+  a {
+    color: var(--global-link-color);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.project-entry__meta {
+  margin: 0 0 1em;
+  color: var(--global-text-color-light);
+  font-size: 0.85em;
+  letter-spacing: 0.01em;
+}
+
+.project-entry__overview p {
+  margin: 0 0 0.9em;
+  line-height: 1.65;
+}
+
+.project-entry__highlights {
+  margin: 0 0 0.9em;
+  padding-left: 1.25em;
+
+  li {
+    margin-bottom: 0.4em;
+    line-height: 1.55;
+  }
+}
+
+.project-entry__links {
+  margin: 0;
+  font-size: 0.9em;
+
+  a {
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.project-entry__sep {
+  margin: 0 0.5em;
+  color: var(--global-text-color-light);
+}
