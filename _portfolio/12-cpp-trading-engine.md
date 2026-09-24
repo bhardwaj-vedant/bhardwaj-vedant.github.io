@@ -4,6 +4,18 @@ collection: portfolio
 kind: project
 order: 12
 excerpt: "Independent project, September 2026 · C++20<br/>A dependency-free intraday trading engine for NSE/BSE equities. The same strategy code and risk gate drive backtesting, paper trading, and live trading. · [Code](https://github.com/theFulminatedHuman/cpp-trading-engine)"
+meta: "Independent Project · C++20 · September 2026"
+code: "https://github.com/theFulminatedHuman/cpp-trading-engine"
+overview: |
+  This is an intraday trading engine for NSE/BSE equities, written in C++20 with no external dependencies. Its
+  central design principle is that backtesting, paper trading, and live trading execute the same strategy code
+  through the same risk gate. Only the market-data source and the order sink change between modes, so behaviour
+  validated in simulation carries over unchanged to production. The engine includes a simulated market feed,
+  tick-replay backtesting, tools for fetching real market history, and an interactive operator console.
+highlights:
+  - "**One code path:** backtest, paper, and live modes share the same code, with a single risk gate in front of every order."
+  - "**Operator console:** it shows status and positions, places manual orders after confirmation, and has a kill switch that halts trading and flattens positions."
+  - "**Tests:** **121 tests** with **583 checks**, runnable without network access or market data."
 ---
 
 **Type:** Independent project (September 2026)<br/>

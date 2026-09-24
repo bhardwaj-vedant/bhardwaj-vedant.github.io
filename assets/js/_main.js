@@ -18,11 +18,14 @@ function determineComputedTheme() {
   let themeSetting = localStorage.getItem("theme");
   themeSetting = (themeSetting != "dark" && themeSetting != "light" && themeSetting != "system") ? "system" : themeSetting;
 
-  // Return the setting if set, or use the browser preference
+  // Return the setting if set; with no stored choice the site defaults to dark
   if (themeSetting != "system") {
     return themeSetting;
   }
-  return browserPref ? "dark" : "light";
+  if (localStorage.getItem("theme") == "system") {
+    return browserPref ? "dark" : "light";
+  }
+  return "dark";
 }
 
 // Set the theme on page load or when explicitly called. Without an argument the
@@ -141,11 +144,11 @@ $(document).ready(function () {
   const scssLarge = 925;          // pixels, from /_sass/_themes.scss
   const scssMastheadHeight = 70;  // pixels, from the current theme (e.g., /_sass/theme/_default.scss)
 
-  // If the user hasn't chosen a theme, follow the OS preference
+  // Apply the stored theme, or dark by default; follow the OS only when "system" was chosen
   setTheme();
   window.matchMedia('(prefers-color-scheme: dark)')
         .addEventListener("change", (e) => {
-          if (!localStorage.getItem("theme")) {
+          if (localStorage.getItem("theme") == "system") {
             setTheme(e.matches ? "dark" : "light");
           }
         });

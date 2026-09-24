@@ -7,7 +7,9 @@ author_profile: true
 
 {% include base_path %}
 
+<p class="project-list__intro">Research projects in machine learning. Each entry summarises the question, the approach, and the principal results; the full write-up has the details.</p>
+
 {% assign items = site.portfolio | where: "kind", "research" | sort: "order" %}
 {% for post in items %}
-  {% include archive-single.html %}
+  {% include project-entry.html %}
 {% endfor %}

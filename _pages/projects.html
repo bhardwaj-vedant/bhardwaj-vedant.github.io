@@ -7,7 +7,9 @@ author_profile: true
 
 {% include base_path %}
 
+<p class="project-list__intro">Engineering, course, and club projects. Each entry summarises the problem, the approach, and the main results; the full write-up has the details.</p>
+
 {% assign items = site.portfolio | where: "kind", "project" | sort: "order" %}
 {% for post in items %}
-  {% include archive-single.html %}
+  {% include project-entry.html %}
 {% endfor %}

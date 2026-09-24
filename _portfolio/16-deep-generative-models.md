@@ -4,6 +4,17 @@ collection: portfolio
 kind: project
 order: 16
 excerpt: "Seasons of Code, Web and Coding Club, IIT Bombay, June–August 2024<br/>Implemented DCGANs, VAEs, and flow-matching models from scratch for image generation on CelebA. · [Code](https://github.com/theFulminatedHuman/DGMs---SOC)"
+meta: "Seasons of Code · Web and Coding Club, IIT Bombay · June – August 2024"
+code: "https://github.com/theFulminatedHuman/DGMs---SOC"
+overview: |
+  This project studied the three main families of deep generative models (adversarial, variational, and
+  flow-based), implementing each from scratch and training on the CelebA face dataset. The emphasis was on the
+  failure modes that separate the families in practice: mode collapse and training instability in GANs, the
+  trade-off between reconstruction and regularisation in VAEs, and the conditioning of flow-matching objectives.
+highlights:
+  - "**GAN:** a **DCGAN** built from scratch, with depth, batch size, and learning rate tuned for sharper, less noisy samples."
+  - "**Flow matching:** loss design, learning-rate schedules, and **Optuna** tuning gave stable convergence and less mode collapse."
+  - "**VAEs:** upsampling and downsampling **VAEs** on 50K CelebA images, with gradient explosions resolved."
 ---
 
 **Organisation:** Seasons of Code, Web and Coding Club, IIT Bombay (June – August 2024)<br/>

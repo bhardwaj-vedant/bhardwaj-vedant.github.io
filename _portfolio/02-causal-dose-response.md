@@ -4,6 +4,21 @@ collection: portfolio
 kind: research
 order: 2
 excerpt: "Research internship, MBZUAI, Abu Dhabi, May–July 2025 · Advisors: Prof. Jin Tian, Dr. Qiang Huang<br/>Improved a state-of-the-art dose-response estimator (CRNet) with attention-based treatment–covariate interactions and adversarially balanced representations."
+meta: "Research Internship · MBZUAI, Abu Dhabi · May – July 2025 · Advisors: Prof. Jin Tian, Dr. Qiang Huang"
+code: "https://github.com/theFulminatedHuman/Contrastive-Balancing-Representation-Network-CRNet"
+overview: |
+  Most treatment-effect estimators assume a binary intervention. Many real decisions, however, are continuous (a
+  dosage, a price, a budget) and depend on earlier treatments. The quantity of interest is then the entire
+  dose-response curve μ(t) = E[Y(t)]. Estimating it from observational data requires correcting for confounding,
+  because units that receive high doses differ systematically from those that receive low ones. This project
+  built on CRNet, a contrastive balancing-representation network, and made two additions. The first is
+  attention-based modelling of treatment–covariate interactions. The second, inspired by ACFR, is adversarial
+  balancing of the learned representation, so that the representation stays predictive of outcomes while
+  revealing as little as possible about treatment assignment.
+highlights:
+  - "**Lower error:** the mean integrated squared error (MISE) fell from **7.55 to 4.3** across 10 treatments, with reduced confounding in the autoregressive setting."
+  - "**Adversarially balanced representations:** a counterfactual-prediction loss combined with an adversarial treatment-assignment loss gave robust bias mitigation across continuous-treatment scenarios."
+  - "**Benchmarks:** the model outperformed the state-of-the-art baseline on a simulated benchmark (10 treatments, 100 covariates), **IHDP**, and **News**, using residual GELU encoders and attention-based feature fusion."
 ---
 
 **Institution:** Mohamed bin Zayed University of Artificial Intelligence (MBZUAI), Abu Dhabi<br/>

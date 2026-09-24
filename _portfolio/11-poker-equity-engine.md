@@ -4,6 +4,20 @@ collection: portfolio
 kind: project
 order: 11
 excerpt: "Independent project, August 2026 · C++20<br/>A Texas Hold'em equity solver that combines exact enumeration with multithreaded Monte Carlo; hand evaluation is 346× faster than the baseline. · [Code](https://github.com/theFulminatedHuman/Poker-Engine)"
+meta: "Independent Project · C++20 · August 2026"
+code: "https://github.com/theFulminatedHuman/Poker-Engine"
+overview: |
+  This is a heads-up Texas Hold'em equity engine. Given the hero's hole cards, the villain's cards or a weighted
+  range, and any community cards, it computes the equity E<sub>H</sub> = P(win) + ½·P(tie). It can do this
+  exactly, by enumerating every remaining board, or by multithreaded Monte Carlo sampling that reports standard
+  errors and confidence intervals and keeps sampling until a requested tolerance is met. The project is an
+  exercise in performance engineering held to a correctness oracle: a minimal perfect hash over bitboards for
+  hand evaluation, cache-aware multithreading, and an exhaustive test suite that checks the sampler against
+  exact enumeration. The engine is available through a command-line tool, a REST API, and a web front end.
+highlights:
+  - "**Hand evaluation:** seven-card evaluation went from **3080 ns to 8.9 ns (346×)**, using a minimal perfect hash over 49,205 seven-card rank multisets on 52-bit bitboards."
+  - "**Throughput:** exact enumeration of all **1,712,304** pre-flop boards takes about 13 ms on 4 cores, and Monte Carlo runs at **49.5M trials/s**."
+  - "**Scaling and correctness:** removing false sharing in per-worker RNG and deck state lifted 4-thread scaling from **1.24× to 2.87×**. 149 tests confirm the expected O(1/√N) convergence."
 ---
 
 **Type:** Independent project (August 2026)<br/>
