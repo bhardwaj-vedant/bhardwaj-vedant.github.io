@@ -62,5 +62,5 @@ Education
 
 Beyond Research
 ======
-Outside research I enjoy astronomy and astrophotography, competitive programming, strategy games, and
-reverse engineering. More on the [Hobbies]({{ base_path }}/hobbies/) page.
+Outside research I enjoy competitive programming, probability puzzles, card games such as poker and blackjack,
+reading mathematics, and films and TV shows. More on the [Hobbies]({{ base_path }}/hobbies/) page.
