@@ -327,13 +327,13 @@
   }
 }
 
-/* Row of profile icons below the name and bio, drawn in each brand's own colours */
+/* Row of monochrome profile icons below the name and bio */
 .author__profiles {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 12px 14px;
-  margin: 14px 0 16px;
+  gap: 10px 13px;
+  margin: 12px 0 14px;
   padding: 0;
   list-style: none;
 
@@ -348,22 +348,23 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    // currentColor parts of the logos (GitHub, LeetCode) follow the theme text colour
+    // the icons use currentColor: a softened text colour that reads in both themes
     color: var(--global-text-color);
+    opacity: 0.7;
     text-decoration: none;
     transition: transform 0.15s ease-in-out, opacity 0.15s ease-in-out;
 
     &:hover,
     &:focus {
       transform: translateY(-2px);
-      opacity: 0.85;
+      opacity: 1;
     }
   }
 
   .brand-icon {
     display: block;
-    width: 22px;
-    height: 22px;
+    width: 18px;
+    height: 18px;
   }
 }
 
