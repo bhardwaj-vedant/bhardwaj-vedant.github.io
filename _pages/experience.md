@@ -19,11 +19,19 @@ Deep causal inference and dose-response estimation for continuous and autoregres
 
 Professional Experience
 ======
-**Data Science Intern**, Alqeora Labs *(December 2025 – January 2026)*
-- Analysed historical equity data with rolling Z-scores and Pearson correlation to find mean-reverting
-  price patterns, and turned them into quantitative signals for dynamic portfolio allocation.
-- Built **LSTM**-based time-series models to forecast equity price movements.
-- Developed a Python visualisation tool that tracks portfolio profit and loss and key market trends.
+**Founder & Lead Researcher**, Alqeora Labs *(independent venture, 2026 – present)*<br/>
+*Virtual perturbation screens: predicting how a population of human cells responds to a drug, a gene edit, or a
+combination, before the experiment is run.*
+[Details]({{ base_path }}/portfolio/05-alqeora-labs/)
+- Building an **unbalanced conditional flow-matching** model on the **Fisher–Rao sphere** of single-cell
+  expression profiles. It learns a joint velocity and growth field from unpaired control and perturbed
+  populations, using within-plate entropic unbalanced optimal-transport couplings and a mass-weighted loss
+  (PyTorch, POT), to predict responses and viability for unseen compounds and genes.
+- Introduced a transcriptome-wide generalisation of **Bliss synergy** built from additive tangent and growth
+  fields, and an ensemble-disagreement **experiment-ranking** (active-learning) method that chooses which wet-lab
+  experiments would most reduce model uncertainty.
+- Designed a pre-registered, distribution-level validation protocol on public Perturb-seq and sci-Plex data,
+  scored on held-out perturbations against linear, nearest-neighbour, GEARS, CPA and CellOT baselines.
 
 **Machine Learning Engineer**, Unmesh Mashruwala Innovation Cell (UMIC), IIT Bombay *(September 2024 – April 2025)*<br/>
 *UMIC is a student technical team of 50+ members that builds autonomous aerial and ground robots.*
