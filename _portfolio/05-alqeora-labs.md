@@ -2,12 +2,12 @@
 title: "Alqeora Labs: Unbalanced Riemannian Flow Matching for Virtual Perturbation Screens"
 collection: portfolio
 order: 5
-excerpt: "Founder & Lead Researcher, Alqeora Labs · Predicting how a population of human cells responds to a drug, a gene edit, or a combination, before the experiment is run."
-meta: "Independent venture · Founder & Lead Researcher · Last updated October 3, 2026"
+excerpt: "Founder's Office Intern, Alqeora Labs, December 2025 – January 2026 · Predicting how a population of human cells responds to a drug, a gene edit, or a combination, before the experiment is run."
+meta: "Founder's Office Internship · Alqeora Labs · December 2025 – January 2026"
 ---
 
-**Role:** Founder & Lead Researcher (independent venture)<br/>
-**Last updated:** October 3, 2026
+**Role:** Founder's Office Intern, working directly with the co-founders<br/>
+**Period:** December 2025 – January 2026
 
 ## 1. Executive summary
 

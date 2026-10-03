@@ -19,18 +19,18 @@ Deep causal inference and dose-response estimation for continuous and autoregres
 
 Professional Experience
 ======
-**Founder & Lead Researcher**, Alqeora Labs *(independent venture, 2026 – present)*<br/>
-*Virtual perturbation screens: predicting how a population of human cells responds to a drug, a gene edit, or a
-combination, before the experiment is run.*
+**Founder's Office Intern**, Alqeora Labs *(December 2025 – January 2026)*<br/>
+*Worked directly with the co-founders on virtual perturbation screens: predicting how a population of human cells
+responds to a drug, a gene edit, or a combination, before the experiment is run.*
 [Details]({{ base_path }}/portfolio/05-alqeora-labs/)
-- Building an **unbalanced conditional flow-matching** model on the **Fisher–Rao sphere** of single-cell
+- Worked on an **unbalanced conditional flow-matching** model on the **Fisher–Rao sphere** of single-cell
   expression profiles. It learns a joint velocity and growth field from unpaired control and perturbed
   populations, using within-plate entropic unbalanced optimal-transport couplings and a mass-weighted loss
   (PyTorch, POT), to predict responses and viability for unseen compounds and genes.
-- Introduced a transcriptome-wide generalisation of **Bliss synergy** built from additive tangent and growth
+- Contributed to a transcriptome-wide generalisation of **Bliss synergy** built from additive tangent and growth
   fields, and an ensemble-disagreement **experiment-ranking** (active-learning) method that chooses which wet-lab
   experiments would most reduce model uncertainty.
-- Designed a pre-registered, distribution-level validation protocol on public Perturb-seq and sci-Plex data,
+- Helped design a pre-registered, distribution-level validation protocol on public Perturb-seq and sci-Plex data,
   scored on held-out perturbations against linear, nearest-neighbour, GEARS, CPA and CellOT baselines.
 
 **Machine Learning Engineer**, Unmesh Mashruwala Innovation Cell (UMIC), IIT Bombay *(September 2024 – April 2025)*<br/>
